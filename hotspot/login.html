@@ -1,0 +1,110 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+
+<head>
+  <title id="title"></title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta http-equiv="pragma" content="no-cache" />
+  <meta http-equiv="expires" content="-1" />
+  <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;" />
+  <link rel="stylesheet" href="css/desa-digital.css">
+  <link rel="icon" href="img/favicon.png" />
+</head>
+
+<body style="background-image: url('img/backgroud.jpg'); font-family: Poppins-Regular">
+  <div class="container">
+    <div class="row">
+      <div class="col-8 mr-a box-semua" id="main" style="float:none;">
+        <div class="row">
+          <div class="col-4">
+            <div class="row">
+              <div class="col-12">
+                <div class="logo bmh-80 bg-white text-center"><img src="img/logo.png" alt="Desa Digital"
+                    style="border-radius: 5px; width:100%; max-width: 240px; height:auto;" /></div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12">
+                <div class="border-atas-bawah">
+                  <div class="text-berjalan bg-white text-grey">
+                    <marquee height="17" scrolldelay="150">Gunakan Layanan Akses Internet Wifi Secukupnya & Jangan Lupa
+                      Untuk Beristirahat</marquee>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="bawah-judul text-grey">
+                <p>Silahkan Masukkan <b>Voucher</b></p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12">
+                <div class="card ">
+                  <div class="login">
+                    $(if chap-id)
+                    <form name="sendin" action="$(link-login-only)" method="post">
+                      <input type="hidden" name="password" />
+                      <input type="hidden" name="dst" value="$(link-orig)" />
+                      <input type="hidden" name="popup" value="true" />
+                    </form>
+
+                    <script type="text/javascript" src="/md5.js"></script>
+                    <script type="text/javascript">
+                      function doLogin() {
+                        document.sendin.password.value = hexMD5('$(chap-id)' + document.login.password.value + '$(chap-challenge)');
+                        document.sendin.submit();
+                        return false;
+                      }
+                    </script>
+                    $(endif)
+
+                    <div>
+                      <form autocomplete="off" name="login" action="$(link-login-only)" method="post" $(if chap-id)
+                        onSubmit="return doLogin()" $(endif)>
+                        <input type="hidden" name="dst" value="$(link-orig)" />
+                        <input type="hidden" name="popup" value="true" />
+                        <input class="form-control-md mr-t-10 plch-center" name="password" type="text"
+                          placeholder="Voucher" />
+                        <div class="text-center mr-t-10">
+                          <button type="submit" class="w-12 bg-template bg-gradient btn-md pd-5">LOGIN</button>
+                        </div>
+                        $(if trial == 'yes')
+                        <div class="text-center mr-t-10">
+                          <a href="$(link-login-only)?dst=$(link-orig-esc)&amp;username=T-$(mac-esc)">
+                            <button style="background: #f606fe;"
+                              class="w-12 bg-template trial btn-md pd-5">TRIAL</button>
+                          </a>
+                        </div>
+                        $(endif)
+                      </form>
+                    </div>
+
+                    $(if error)<div class="alert bg-danger text-center mr-t-10">$(error)</div>$(endif)
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="cardx">
+                <center><img src="img/harga.jpg" alt="Desa Digital" style="width:100%; max-width: auto; height:auto;" />
+                </center>
+              </div>
+            </div>
+          </div>
+          <div class="col-8">
+            <div class="row">
+              <img class="wkwkwk" src="img/banner.jpg" alt="Desa Digital"
+                style="width:100%; max-width: 607px; height:auto;margin-top: 30px;" />
+            </div>
+            <div class="text-center text-grey" style="font-size: 80%">&copy; Copyright 2020 | <a style="color: grey"
+                href="https://www.danangrudy.com/">Danang Rudy Purnomo</a> - All rights reserved
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</body>
+
+</html>
