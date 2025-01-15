@@ -3,6 +3,10 @@ body {
     Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: 15px;
   background: #f1f1f1;
+  background-image: url('background.jpg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
   margin-top: 0;
   margin-bottom: 0;
 }
@@ -43,7 +47,8 @@ form {
   will-change: transform;
   border-radius: 14px;
   background: #fff;
-  width: 100%;
+  width: 90%;
+  margin-top: 25%;
 }
 .title-wrapper {
   text-align: center;

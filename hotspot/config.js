@@ -1,6 +1,6 @@
 const config = {
   loginMethod: {
-    member: false,
+    member: true,
     voucher: true,
     qrCode: false,
     default: "voucher", // member, voucher, qrCode
