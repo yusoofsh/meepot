@@ -60,36 +60,40 @@
                     </script>
                     $(endif)
 
-                    <div>
-                      <form autocomplete="off" name="login" action="$(link-login-only)" method="post" $(if chap-id)
-                        onSubmit="return doLogin()" $(endif)>
-                        <input type="hidden" name="dst" value="$(link-orig)" />
-                        <input type="hidden" name="popup" value="true" />
-                        <input class="form-control-md mr-t-10 plch-center" name="password" type="text"
-                          placeholder="Voucher" />
-                        <div class="text-center mr-t-10">
-                          <button type="submit" class="w-12 bg-template bg-gradient btn-md pd-5">LOGIN</button>
-                        </div>
-                        $(if trial == 'yes')
-                        <div class="text-center mr-t-10">
-                          <a href="$(link-login-only)?dst=$(link-orig-esc)&amp;username=T-$(mac-esc)">
-                            <button style="background: #f606fe;"
-                              class="w-12 bg-template trial btn-md pd-5">TRIAL</button>
-                          </a>
-                        </div>
-                        $(endif)
-                      </form>
-                    </div>
+                    <form
+                      autocomplete="off"
+                      name="login"
+                      action="$(link-login-only)"
+                      method="post"
+                      $(if chap-id)
+                      onSubmit="return doLogin()"
+                      $(endif)
+                    >
+                      <input type="hidden" name="dst" value="$(link-orig)" />
+                      <input type="hidden" name="popup" value="true" />
+                      <input class="form-control-md mr-t-10 plch-center" name="password" type="text" placeholder="Voucher" />
+                      <div class="text-center mr-t-10">
+                        <button type="submit" class="w-12 bg-template bg-gradient btn-md pd-5">LOGIN</button>
+                      </div>
+                      $(if trial == 'yes')
+                      <div class="text-center mr-t-10">
+                        <a href="$(link-login-only)?dst=$(link-orig-esc)&amp;username=T-$(mac-esc)">
+                          <button style="background: #f606fe;" class="w-12 bg-template trial btn-md pd-5">TRIAL</button>
+                        </a>
+                      </div>
+                      $(endif)
+                    </form>
 
-                    $(if error)<div class="alert bg-danger text-center mr-t-10">$(error)</div>$(endif)
+                    $(if error)
+                    <div class="alert bg-danger text-center mr-t-10">$(error)</div>
+                    $(endif)
                   </div>
                 </div>
               </div>
             </div>
             <div class="row">
               <div class="cardx">
-                <center><img src="img/harga.jpg" alt="Desa Digital" style="width:100%; max-width: auto; height:auto;" />
-                </center>
+                <center><img src="img/harga.jpg" alt="Desa Digital" style="width:100%; max-width: auto; height:auto;" /></center>
               </div>
             </div>
           </div>
