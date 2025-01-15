@@ -1,8 +1,8 @@
 const config = {
   loginMethod: {
-    member: true,
+    member: false,
     voucher: true,
-    qrCode: false,
+    qrCode: true,
     default: "voucher", // member, voucher, qrCode
   },
   qrCodeScannerURL: "https://example.com/qrcode-scanner",
